@@ -1,0 +1,55 @@
+.logo {
+  font-size: 60px;
+  margin: 0;
+  color: #0a0c10;
+}
+
+main {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+h3 {
+  font-family: "Mukta";
+  font-size: 36px;
+  font-weight: 400;
+  color: #0a0c10;
+  line-height: 30px;
+}
+
+p {
+  font-family: "Mukta";
+  font-size: 22px;
+  font-weight: 300;
+  color: #0a0c10;
+}
+
+.intro {
+  margin-bottom: 0;
+}
+
+.underscore {
+  font-weight: 400;
+}
+
+hr {
+  border: none;
+  border-top: 2px dotted;
+  height: 2px;
+}
+
+span {
+  font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+  main {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 990px) {
+  img {
+    width: 100px;
+  }
+}
