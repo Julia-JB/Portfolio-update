@@ -1,0 +1,119 @@
+:root {
+  --primary-color: #4d84eb;
+  --secondary-color: #f5f2fe;
+  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+main {
+  max-width: 74%;
+  margin: 0 auto;
+  font-family: "Mukta";
+  color: #0a0c10;
+}
+
+.logo {
+  height: auto;
+  width: 120px;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 300;
+  color: #0a0c10;
+}
+
+hr {
+  border: none;
+  border-top: 2px dotted;
+  height: 2px;
+}
+
+.tools span {
+  font-weight: 500;
+}
+
+pre {
+  overflow: auto;
+}
+var {
+  color: darkblue;
+  font-style: normal;
+  font-weight: 500;
+}
+
+var.comment {
+  color: #0a0c10;
+  opacity: 0.4;
+}
+.expertise-icons img {
+  width: 70px;
+}
+
+li {
+  font-size: 20px;
+}
+
+.launch-link {
+  background: var(--primary-color);
+  font-size: 16px;
+  color: white;
+  border-radius: 6px;
+  padding: 15px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.launch-link:hover {
+  background-color: #246bce;
+  transition: 0.7s;
+  box-shadow: var(--box-shadow);
+}
+
+.links {
+  max-width: 48%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+a {
+  color: #0a0c10;
+  text-decoration: none;
+}
+
+.contacts p,
+.contacts span {
+  font-size: 20px;
+}
+
+.phone {
+  height: auto;
+  width: 80px;
+}
+
+@media (max-width: 1200px) {
+  main {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 1088px) {
+  .logo {
+    width: 60px;
+  }
+  .expertise-icons img {
+    width: 42px;
+  }
+
+  h3,
+  .expertise-icons {
+    margin-left: 0;
+  }
+
+  .launch-link {
+    font-size: 14px;
+    padding: 12px;
+  }
+  .links {
+    max-width: 90%;
+  }
+}

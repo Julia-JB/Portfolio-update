@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yuliia Batsheva</title>
+    <link rel="icon" type="image/png" href="images/logo-upd.png" />
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -12,81 +13,319 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600&display=swap"
       rel="stylesheet"
     />
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://kit.fontawesome.com/c5ab93ad6a.js"
-      crossorigin="anonymous"
-    ></script>
+
+    <title>
+      Yuliia Batsheva, software QA engineer based in Lynnwood, Washington
+    </title>
   </head>
   <body>
     <main>
-      <div class="container">
-        <div class="row align-items-center mt-5">
-          <div class="col-lg-3 text-center">
-            <img src="source/logo_upd.png" alt="logo" class="img-fluid px-4" />
+      <nav class="navbar sticky-top navbar-expand-md bg-white">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-5">
+              <a
+                class="nav-link active fs-4"
+                aria-current="page"
+                href="index.html"
+                >About Me</a
+              >
+              <a class="nav-link fs-4" href="#projects">Projects</a>
+              <a class="nav-link fs-4" href="contacts.html">Contacts</a>
+            </div>
           </div>
-          <div class="col-lg-9 ps-5">
-            <h3>Hi,</h3>
-            <p class="intro">
-              and welcome! My name is Yuliia Batsheva. I am a software QA
-              engineer from Ukraine, based in Lynnwood, Washington. I started
-              off as a graphic designer, creating graphics for web. Later on, I
-              switched to more technical tasks, exploring coding, development
-              and testing.
-            </p>
-            <p class="underscore">_</p>
-            <p>
-              My preferred tools are <span>JavaScript</span> and
-              <span>Webdriverio</span> for test automation,
-              <span>Postman</span> for API testing, <span>Jira</span> and
-              <span>TestRail</span> as management and bug tracking systems.
-            </p>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row mt-3 align-items-center">
+          <div class="col-lg-3 text-center">
+            <img src="images/logo-upd.png" alt="logo" class="logo" />
+          </div>
+          <div class="col-lg-9">
+            <h2 class="ms-md-4">Hi,</h2>
+            <div class="ms-md-4">
+              <p>
+                and welcome! My name is Yuliia Batsheva. I am a software QA
+                engineer from Ukraine, based in Lynnwood, Washington. I started
+                off as a
+                <a
+                  href="https://stock.adobe.com/ua/contributor/203948977/juliabatsheva"
+                  target="_blank"
+                  ><strong>graphic designer,</strong>
+                </a>
+                creating assets for web. Later on, I switched to more technical
+                tasks, exploring coding, development and testing.
+              </p>
+
+              <p class="tools">
+                My preferred tools are
+                <span>JavaScript</span> frameworks such as
+                <span>Webdriverio</span> and <span>Cypress</span> for front-end
+                test automation, <span>Postman</span> for API testing,
+                <span>Jira</span> and <span>TestRail</span> as management and
+                bug tracking systems. I continuously learn new tools and
+                techniques.
+              </p>
+            </div>
           </div>
         </div>
       </div>
       <hr />
+      <h4 id="projects" class="text-center mt-lg-5 mt-md-4">
+        My Recent Projects
+      </h4>
+      <div class="container">
+        <div class="row mt-lg-5">
+          <div class="col-lg-6 bg-light ps-md-4">
+            <h6 class="pt-4">API request</h6>
+            <code
+              >POST
+              {{baseURL}}/1/boards/?name={{boardName}}&defaultLists=false&key={{trelloKey}}&token={{trelloToken}}</code
+            >
+            <h6 class="pt-4">pre-request script</h6>
+            <pre>
+  <var>let</var> currentBoardNumber = pm.environment.<var>get</var>("currentBoardNumber");
+
+  <var>if </var>(currentBoardNumber) {
+    currentBoardNumber++
+  } <var>else</var> {
+    currentBoardNumber = 1;
+  }
+              
+<var>let</var> boardName = "My board " + currentBoardNumber;
+              
+pm.environment.<var>set</var>("boardName", boardName);
+pm.environment.<var>set</var>("currentBoardNumber", currentBoardNumber);</pre>
+            <h6>test script</h6>
+            <pre>
+<var>let</var> response = pm.response.json();
+pm.environment.<var>set</var>("boardID", response.id);
+
+pm.<var>test</var>("Status code is 200", function () {
+  pm.response.to.have.status(200);
+});
+            
+pm.<var>test</var>("Board is created", function () {
+  pm.expect(response.name).to.eql(pm.environment.<var>get</var>("boardName"));
+})
+            
+pm.<var>test</var>("Cookie exists", function() {
+  pm.expect(pm.cookies.has("preAuthProps")).to.be.true;
+})
+            </pre>
+          </div>
+          <div class="col-lg-6 mt-3 mt-lg-1">
+            <h2 class="text-center">Trello API Testing with Postman</h2>
+            <div class="ms-lg-5 mb-lg-3">
+              <p>
+                Creating collection of requests in Postman with implementation
+                of collection environment, pre-request and test scripts. The
+                collection follows basic user flow on Trello app.
+              </p>
+              <p>
+                As an example, I've added a request that creates a Trello board.
+                It includes pre-request and test scripts that generate data with
+                js (board name), parse the response and execute tests verifying
+                that the board was created. Finally, the script sets collection
+                variables that will be used for next requests. The variables are
+                stored inside the environment and are used as query parameters
+                and varibles for test scripts. The collection is automated, it
+                can be run from CLI, and integrated with CI/CD tools.
+              </p>
+              <div class="text-center mt-5">
+                <a
+                  href="https://github.com/Julia-JB/Trello-API-tests.git"
+                  target="_blank"
+                  class="launch-link"
+                  title="GitHub Repository"
+                  >GitHub Repo</a
+                >
+              </div>
+
+              <p class="fw-semibold mt-3 mb-3">Tools</p>
+              <div class="expertise-icons">
+                <img
+                  src="images/postman-icon-svgrepo-com.svg"
+                  alt="Postman icon"
+                  class="img-fluid"
+                />
+                <img
+                  src="images/javascript-svgrepo-com.svg"
+                  alt="JavaScript icon"
+                  class="img-fluid ms-4"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-lg-6 mt-4">
+            <h2 class="text-center">
+              Front-end Test Automation with WebdriverIO
+            </h2>
+            <div class="mb-lg-3">
+              <p>
+                Automating test framework for an online store. Here are examples
+                of tests written in WebdriverIO using Mocha library.
+              </p>
+              <p>
+                The tests here belong to search functionality test suite and
+                focus on auto suggestion box feature. These particular tests
+                verify that:
+              </p>
+              <ul>
+                <li>suggestion box is displayed on entering search query</li>
+                <li>auto suggestions include the searched entry</li>
+                <li>auto suggestions include link to the items</li>
+              </ul>
+              <p>
+                Finally, auto suggestions for a search entry are captured and
+                printed out to the console. <br />
+                Page Object Model pattern was implemented so the selectors and
+                functions are defined and imported from search-page.js.
+              </p>
+
+              <p class="fw-semibold mt-3">Tools</p>
+              <div class="expertise-icons">
+                <img
+                  src="images/wdio.png"
+                  alt="WebdriverIO icon"
+                  class="img-fluid"
+                />
+                <img
+                  src="images/javascript-svgrepo-com.svg"
+                  alt="JavaScript icon"
+                  class="img-fluid ms-4"
+                />
+                <img
+                  src="images//chrome-devtools.svg"
+                  alt="Chrome Developer Tools icon"
+                  class="img-fluid ms-4"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-4">
+            <div class="bg-light ms-lg-2">
+              <pre>
+                <code>
+  import searchPage from "../pages/search-page.js";
+  import searchData from "../data/searchData.js";
+
+  describe("Search functionality", () => {
+
+    beforeEach(async () => {
+      await browser.url("/");
+    });
+                
+    it("should display relevant auto suggestions", async () => {
+      let searchEntry = searchData.searchEntry;
+      await searchPage.addSearchValue(searchEntry);           
+      let suggestedItemLinks = await searchPage.suggestedLinks;
+
+    <var class="comment">//verifying auto suggestions box is displayed</var>
+      await expect(suggestedItemLinks).toBeDisplayed();
+    <var class="comment">//veryfying auto suggestions searched word</var>
+      for (let element of suggestedItemLinks) {
+        await expect(element).toHaveTextContaining(searchEntry);
+      }
+    <var class="comment">//verifying auto suggestions include link to item</var>
+      for (let element of suggestedItemLinks) {
+        await expect(element).toHaveLinkContaining(searchEntry);
+      }  
+    <var class="comment">//printing out suggested items</var>
+      let suggestedItems = [];
+      for (let item of suggestedItemLinks) {
+        suggestedItems.push(await item.getText());
+        }
+        console.log(`Suggested itmes for ${searchEntry} are`, 
+        suggestedItems.join(", "));
+      });           
+    });</code>
+            </pre>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3 mb-5">
+          <div class="col-lg-6 mt-3">
+            <div class="container p-2 p-lg-4 bg-light">
+              <img
+                class="img-fluid rounded shadow-sm"
+                src="images/weather-app-preview.png"
+                alt="weather app preview image"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 mt-3">
+            <h2 class="text-center">Vanilla JavaScript Weather App</h2>
+            <div class="ms-lg-5">
+              <p>
+                Weather app created with HTML, CSS and JS. My practice project
+                for front-end development and API integration. The app includes
+                search functionality, units conversion option and provides
+                weather forecast for next 6 days.
+              </p>
+              <div class="text-center mt-5">
+                <a
+                  href="https://chimerical-khapse-dc253b.netlify.app/"
+                  target="_blank"
+                  class="launch-link"
+                  title="Launch Weather App"
+                  >Launch App</a
+                >
+              </div>
+              <p class="fw-semibold mt-3 mb-3">Tools</p>
+              <div class="expertise-icons">
+                <img
+                  src="images/html-icon.png"
+                  alt="HTML5 icon"
+                  class="img-fluid"
+                />
+                <img
+                  src="images/css-icon.png"
+                  alt="CSS icon"
+                  class="img-fluid ms-4"
+                />
+                <img
+                  src="images/bootstrap-icon.png"
+                  alt="Bootstrap icon"
+                  class="img-fluid ms-4"
+                />
+                <img
+                  src="images/api-icon.png"
+                  alt="API icon"
+                  class="img-fluid ms-4"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>
-
-<!--
-  <div class="row">
-    <div class="col-2">
-        <h1 class="display-1">YB.</h1>
-    </div>
-    <div class="col-10">
-        <div class="row">
-            <h3>Hi,</h3>
-            <p>and welcome here. My name is Yuliia Batsheva. I am a software QA engineer, based in Lynnwood, Washington.</p>
-            <p>_</p>
-        </div>
-        <div class="row">
-            <div class="col-8">
-            I started as a graphic designer, creating graphics for web. Later on, I switched to the more technical side, exploring coding and development. Now I continue my path as a software QA engineer. 
-            </div>
-            <div class="col-4">
-                <p>My preferred tools are <span>JavaScript</span> and <span>Webdriverio</span> for test automation, <span>Postman</span> for API testing, <span>Jira</span> and <span>TestRail</span> as management and bug tracking systems.</p>
-            </div>
-        </div>
-    </div>
-</div>
--->
