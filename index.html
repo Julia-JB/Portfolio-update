@@ -102,45 +102,50 @@
       <div class="container">
         <div class="row mt-lg-5">
           <div class="col-lg-6 bg-light ps-md-4">
-            <h6 class="pt-4">API request</h6>
-            <code
-              >POST
-              {{baseURL}}/1/boards/?name={{boardName}}&defaultLists=false&key={{trelloKey}}&token={{trelloToken}}</code
-            >
-            <h6 class="pt-4">pre-request script</h6>
-            <pre>
-  <var>let</var> currentBoardNumber = pm.environment.<var>get</var>("currentBoardNumber");
+            <div class="m-1 m-lg-2">
+              <h6 class="pt-4 ps-3">API request</h6>
+              <p class="ps-3 request">
+                POST
+                {{baseURL}}/1/boards/?name={{boardName}}&defaultLists=false&key={{trelloKey}}&token={{trelloToken}}
+              </p>
 
-  <var>if </var>(currentBoardNumber) {
-    currentBoardNumber++
+              <h6 class="pt-1 ps-3">pre-request script</h6>
+              <pre class="ps-3">
+<var>let</var> currentBoardNumber = pm.environment.<var>get</var>("currentBoardNumber");
+<var>if </var>(currentBoardNumber) {
+  currentBoardNumber++
   } <var>else</var> {
     currentBoardNumber = 1;
-  }
+} 
               
 <var>let</var> boardName = "My board " + currentBoardNumber;
               
 pm.environment.<var>set</var>("boardName", boardName);
 pm.environment.<var>set</var>("currentBoardNumber", currentBoardNumber);</pre>
-            <h6>test script</h6>
-            <pre>
-<var>let</var> response = pm.response.json();
-pm.environment.<var>set</var>("boardID", response.id);
+              <h6 class="ps-3">test script</h6>
+              <pre>
+  <var>let</var> response = pm.response.json();
+  pm.environment.<var>set</var>("boardID", response.id);
 
-pm.<var>test</var>("Status code is 200", function () {
-  pm.response.to.have.status(200);
-});
+  pm.<var>test</var>("Status code is 200", function () {
+      pm.response.to.have.status(200);
+  });
             
-pm.<var>test</var>("Board is created", function () {
-  pm.expect(response.name).to.eql(pm.environment.<var>get</var>("boardName"));
-})
+  pm.<var>test</var>("Board is created", function () {
+    pm.expect(response.name).to.eql(pm.environment.<var>get</var>("boardName"));
+  })
             
-pm.<var>test</var>("Cookie exists", function() {
-  pm.expect(pm.cookies.has("preAuthProps")).to.be.true;
-})
-            </pre>
+  pm.<var>test</var>("Cookie exists", function() {
+    pm.expect(pm.cookies.has("preAuthProps")).to.be.true;
+  })
+            </pre
+              >
+            </div>
           </div>
           <div class="col-lg-6 mt-3 mt-lg-1">
-            <h2 class="text-center">Trello API Testing with Postman</h2>
+            <h2 class="text-center mt-2 mt-md-1">
+              Trello API Testing with Postman
+            </h2>
             <div class="ms-lg-5 mb-lg-3">
               <p>
                 Creating collection of requests in Postman with implementation
@@ -157,7 +162,7 @@ pm.<var>test</var>("Cookie exists", function() {
                 and varibles for test scripts. The collection is automated, it
                 can be run from CLI, and integrated with CI/CD tools.
               </p>
-              <div class="text-center mt-5">
+              <div class="text-center mt-4">
                 <a
                   href="https://github.com/Julia-JB/Trello-API-tests.git"
                   target="_blank"
@@ -232,7 +237,8 @@ pm.<var>test</var>("Cookie exists", function() {
           </div>
           <div class="col-lg-6 mt-4">
             <div class="bg-light ms-lg-2">
-              <pre>
+              <div class="m-1 m-lg-2">
+                <pre class="pt-3 ps-xl-2">
                 <code>
   import searchPage from "../pages/search-page.js";
   import searchData from "../data/searchData.js";
@@ -268,6 +274,7 @@ pm.<var>test</var>("Cookie exists", function() {
       });           
     });</code>
             </pre>
+              </div>
             </div>
           </div>
         </div>
@@ -290,7 +297,7 @@ pm.<var>test</var>("Cookie exists", function() {
                 search functionality, units conversion option and provides
                 weather forecast for next 6 days.
               </p>
-              <div class="text-center mt-5">
+              <div class="text-center mt-4">
                 <a
                   href="https://chimerical-khapse-dc253b.netlify.app/"
                   target="_blank"
