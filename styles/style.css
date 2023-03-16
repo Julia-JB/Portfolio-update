@@ -91,7 +91,7 @@ a {
   font-size: 20px;
 }
 
-.phone {
+.phone-img {
   height: auto;
   width: 80px;
 }
@@ -135,5 +135,9 @@ a {
     display: block;
     width: 70%;
     margin: auto;
+  }
+
+  .phone-img {
+    width: 20%
   }
 }
