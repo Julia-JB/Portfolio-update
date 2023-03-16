@@ -250,18 +250,18 @@ pm.environment.<var>set</var>("currentBoardNumber", currentBoardNumber);</pre>
       await browser.url("/");
     });
                 
-    it("should display relevant auto suggestions", async () => {
+    it("should display relevant auto suggestions with links", async () => {
       let searchEntry = searchData.searchEntry;
       await searchPage.addSearchValue(searchEntry);           
       let suggestedItemLinks = await searchPage.suggestedLinks;
 
-    <var class="comment">//verifying auto suggestions box is displayed</var>
+    <var class="comment">//auto suggestions box is displayed</var>
       await expect(suggestedItemLinks).toBeDisplayed();
-    <var class="comment">//veryfying auto suggestions searched word</var>
+    <var class="comment">//auto suggestions contain the searched word</var>
       for (let element of suggestedItemLinks) {
         await expect(element).toHaveTextContaining(searchEntry);
       }
-    <var class="comment">//verifying auto suggestions include link to item</var>
+    <var class="comment">//auto suggestions include links to the item</var>
       for (let element of suggestedItemLinks) {
         await expect(element).toHaveLinkContaining(searchEntry);
       }  
