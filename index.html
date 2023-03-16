@@ -33,36 +33,19 @@
     </title>
   </head>
   <body>
-    <main>
-      <nav class="navbar sticky-top navbar-expand-md bg-white">
-        <div class="container-fluid">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ms-5">
-              <a
-                class="nav-link active fs-4"
-                aria-current="page"
-                href="index.html"
-                >About Me</a
-              >
-              <a class="nav-link fs-4" href="#projects">Projects</a>
-              <a class="nav-link fs-4" href="contacts.html">Contacts</a>
-            </div>
-          </div>
-        </div>
-      </nav>
+    <main>     
       <div class="container">
-        <div class="row mt-3 align-items-center">
+        <nav>
+          <ul>
+            <li class="active"><a href="index.html">About Me</a>
+              </li>
+            <li class="ms-3"><a href="#projects">Projects</a>
+              </li>
+            <li class="ms-3"><a href="contacts.html">Contacts</a>
+              </li>
+          </ul>
+        </nav>
+        <div class="row mt-2 align-items-center">
           <div class="col-lg-3 text-center">
             <img src="images/logo-upd.png" alt="logo" class="logo" />
           </div>
@@ -144,9 +127,9 @@ pm.environment.<var>set</var>("currentBoardNumber", currentBoardNumber);</pre>
             </div>
           </div>
           <div class="col-lg-6 mt-3 mt-lg-1">
-            <h2 class="text-center mt-2 mt-md-1">
+            <h3 class="text-center mt-2 mt-md-1">
               Trello API Testing with Postman
-            </h2>
+            </h3>
             <div class="ms-lg-5 mb-lg-3">
               <p>
                 Creating collection of requests in Postman with implementation
@@ -191,23 +174,23 @@ pm.environment.<var>set</var>("currentBoardNumber", currentBoardNumber);</pre>
         </div>
         <div class="row mt-3">
           <div class="col-lg-6 mt-4">
-            <h2 class="text-center">
+            <h3 class="text-center">
               Front-end Test Automation with WebdriverIO
-            </h2>
+            </h3>
             <div class="mb-lg-3">
               <p>
-                Automating test framework for an online store. Here are examples
+                Automating test framework for an e-commerce project. Here are examples
                 of tests written in WebdriverIO using Mocha library.
               </p>
               <p>
                 The tests here belong to search functionality test suite and
-                focus on auto suggestion box feature. These particular tests
+                focus on the search box auto suggestions feature. These particular tests
                 verify that:
               </p>
               <ul>
-                <li>suggestion box is displayed on entering search query</li>
+                <li>suggestion box is displayed when entering search query</li>
                 <li>auto suggestions include the searched entry</li>
-                <li>auto suggestions include link to the items</li>
+                <li>auto suggestions include links to the items</li>
               </ul>
               <p>
                 Finally, auto suggestions for a search entry are captured and
@@ -290,7 +273,7 @@ pm.environment.<var>set</var>("currentBoardNumber", currentBoardNumber);</pre>
             </div>
           </div>
           <div class="col-lg-6 mt-3">
-            <h2 class="text-center">Vanilla JavaScript Weather App</h2>
+            <h3 class="text-center">Vanilla JavaScript Weather App</h3>
             <div class="ms-lg-5">
               <p>
                 Weather app created with HTML, CSS and JS. My practice project
