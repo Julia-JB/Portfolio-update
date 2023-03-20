@@ -4,12 +4,11 @@
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 main {
-  max-width: 74%;
+  max-width: 76%;
   margin: 0 auto;
   font-family: "Mukta";
   color: #0a0c10;
 }
-
 
 nav ul {
   text-align: left;
@@ -18,17 +17,16 @@ nav ul {
 }
 nav li {
   display: inline;
-  list-style: none; 
+  list-style: none;
 }
 
 nav a:hover {
- 
   transition: all 100ms ease-in-out;
 }
 
 nav li.active a,
 nav a:hover {
-color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .logo {
@@ -95,21 +93,47 @@ li {
   box-shadow: var(--box-shadow);
 }
 
-.links {
-  max-width: 48%;
-  margin: auto;
+.contact-links {
+  max-width: 47%;
+  margin: 20px auto;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.contact-links a {
+  font-size: 20px;
+}
+
+.contact-links a:hover {
+  color: var(--primary-color);
 }
 a {
   color: #0a0c10;
   text-decoration: none;
 }
 
-.contacts p,
-.contacts span {
-  font-size: 20px;
+footer {
+  margin: 70px 0 60px;
+}
+
+.email-link a {
+  font-size: 22px;
+}
+
+.email-link a:hover {
+  color: var(--primary-color);
+}
+
+footer .social-links a {
+  color: var(--primary-color);
+  font-size: 26px;
+  margin: 0 20px;
+}
+
+footer .social-links a:hover {
+  color: #246bce;
+  transition: 0.7s;
 }
 
 .phone-img {
@@ -117,13 +141,6 @@ a {
   width: 80px;
 }
 
-.coded-by {
-  display: block;
-  text-align: center;
-  font-size: 16px;
-  opacity: 0.8;
-  margin-bottom: 48px;
-}
 @media (max-width: 1200px) {
   main {
     max-width: 90%;
@@ -149,6 +166,9 @@ a {
   .links {
     max-width: 90%;
   }
+  .phone-img {
+    width: 14%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -158,13 +178,16 @@ a {
     margin: auto;
   }
 
- nav ul {
-  text-align: center;
-  padding: 14px;
-  font-size: 16px;
- }
+  nav ul {
+    text-align: center;
+    padding: 14px;
+    font-size: 16px;
+  }
 
-  .phone-img {
-    width: 20%
+  .contact-links {
+    max-width: 100%;
+  }
+  .contact-links a {
+    font-size: 16px;
   }
 }

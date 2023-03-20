@@ -27,25 +27,25 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://kit.fontawesome.com/c5ab93ad6a.js"
+      crossorigin="anonymous"
+    ></script>
 
     <title>
       Yuliia Batsheva, software QA engineer based in Lynnwood, Washington
     </title>
   </head>
   <body>
-    <main>  
+    <main>
       <nav>
         <ul>
-          <li class="active"><a href="index.html">About Me</a>
-            </li>
-          <li class="ms-3"><a href="#projects">Projects</a>
-            </li>
-          <li class="ms-3"><a href="contacts.html">Contacts</a>
-            </li>
+          <li class="active"><a href="index.html">About Me</a></li>
+          <li class="ms-3"><a href="#projects">Projects</a></li>
+          <li class="ms-3"><a href="contacts.html">Contacts</a></li>
         </ul>
-      </nav>   
+      </nav>
       <div class="container">
-    
         <div class="row mt-2 align-items-center">
           <div class="col-lg-3 text-center">
             <img src="images/logo-upd.png" alt="logo" class="logo" />
@@ -127,10 +127,8 @@ pm.environment.<var>set</var>("currentBoardNumber", currentBoardNumber);</pre>
               >
             </div>
           </div>
-          <div class="col-lg-6 mt-3 mt-lg-1">
-            <h3 class="text-center mt-2 mt-md-1">
-              Trello API Testing with Postman
-            </h3>
+          <div class="col-lg-6 mt-3 mt-md-1">
+            <h3 class="text-center">Trello API Testing with Postman</h3>
             <div class="ms-lg-5 mb-lg-3">
               <p>
                 Creating collection of requests in Postman with implementation
@@ -174,19 +172,19 @@ pm.environment.<var>set</var>("currentBoardNumber", currentBoardNumber);</pre>
           </div>
         </div>
         <div class="row mt-3">
-          <div class="col-lg-6 mt-4">
-            <h3 class="text-center">
+          <div class="col-lg-6 mt-3">
+            <h3 class="text-center mt-2">
               Front-end Test Automation with WebdriverIO
             </h3>
             <div class="mb-lg-3">
               <p>
-                Automating test framework for an e-commerce project. Here are examples
-                of tests written in WebdriverIO using Mocha library.
+                Automating test framework for an e-commerce project. Here are
+                examples of tests written in WebdriverIO using Mocha library.
               </p>
               <p>
                 The tests here belong to search functionality test suite and
-                focus on the search box auto suggestions feature. These particular tests
-                verify that:
+                focus on the search box auto suggestions feature. These
+                particular tests verify that:
               </p>
               <ul>
                 <li>suggestion box is displayed when entering search query</li>
@@ -220,7 +218,7 @@ pm.environment.<var>set</var>("currentBoardNumber", currentBoardNumber);</pre>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 mt-4">
+          <div class="col-lg-6 mt-3">
             <div class="bg-light ms-lg-2">
               <div class="m-1 m-lg-2">
                 <pre class="pt-3 ps-xl-2">
@@ -234,7 +232,7 @@ pm.environment.<var>set</var>("currentBoardNumber", currentBoardNumber);</pre>
       await browser.url("/");
     });
                 
-    it("should display relevant auto suggestions with links", async () => {
+    it("should display relevant suggestions with links", async () => {
       let searchEntry = searchData.searchEntry;
       await searchPage.addSearchValue(searchEntry);           
       let suggestedItemLinks = await searchPage.suggestedLinks;
@@ -317,8 +315,23 @@ pm.environment.<var>set</var>("currentBoardNumber", currentBoardNumber);</pre>
             </div>
           </div>
         </div>
+        <footer>
+          <div class="email-link text-center mb-3">
+            <a href="mailto:batshevajulia@gmail.com">batshevajulia@gmail.com</a>
+          </div>
+          <div class="social-links d-flex justify-content-center">
+            <a href="https://github.com/Julia-JB" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a href="https://www.instagram.com/juliabatshev/" target="_blank">
+              <i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://www.facebook.com/julia.batsheva" target="_blank">
+              <i class="fa-brands fa-facebook"></i
+            ></a>
+          </div>
+        </footer>
       </div>
-      <small class="coded-by">- coded by Yuliia Batsheva -</small>
     </main>
   </body>
 </html>
