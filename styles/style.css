@@ -95,7 +95,7 @@ li {
 
 .contact-links {
   max-width: 47%;
-  margin: 20px auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -111,6 +111,10 @@ li {
 a {
   color: #0a0c10;
   text-decoration: none;
+}
+
+.summary {
+  margin-bottom: 12px;
 }
 
 footer {
@@ -169,6 +173,11 @@ footer .social-links a:hover {
   .phone-img {
     width: 14%;
   }
+  nav ul {
+    text-align: center;
+    padding: 14px;
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -176,12 +185,6 @@ footer .social-links a:hover {
     display: block;
     width: 70%;
     margin: auto;
-  }
-
-  nav ul {
-    text-align: center;
-    padding: 14px;
-    font-size: 16px;
   }
 
   .contact-links {
